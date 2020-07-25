@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-import { FormGroup, FormControl, InputGroup,Button } from 'react-bootstrap';
+import { FormGroup, FormControl, InputGroup } from 'react-bootstrap';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: ' '
+    }
+  }
+
   render() {
     return (
       <div className="App">
-       <div className="App-title">Music Maestro from App</div>
+       <div className="App-title">Music Maestro</div>
        <FormGroup>
        <InputGroup>
        <FormControl
