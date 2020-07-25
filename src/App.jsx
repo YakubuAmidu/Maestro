@@ -25,6 +25,11 @@ class App extends Component {
         placeholder="search for an artist.."
         value={this.state.query}
         onChange={event => {this.setState({query: event.target.value})}}
+        onKeyPress={event => {
+          if (this.key === "Enter") {
+            this.search();
+          }
+        }}
        />
        <Button onClick={() => this.search()}>search</Button>
         </InputGroup>
