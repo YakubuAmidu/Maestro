@@ -19,6 +19,8 @@ class App extends Component {
        <FormControl
         type="text"
         placeholder="search for an artist.."
+        query={this.state.query}
+        onChange={event => {this.setState({query: event.target.value})}}
        />
         </InputGroup>
        </FormGroup>
