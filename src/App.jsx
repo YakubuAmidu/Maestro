@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
+import Profile from './Profile';
 
 class App extends Component {
   constructor(props) {
@@ -47,10 +48,9 @@ class App extends Component {
        <Button onClick={() => this.search()}>search</Button>
         </InputGroup>
        </FormGroup>
-       <div className="Profile">
-       <div>Artist Picture</div>
-       <div>Artist Name</div>
-       </div>
+       <Profile
+       artist={this.state.artist}
+       />
        <div className="Gallery">
          Gallery
        </div>
