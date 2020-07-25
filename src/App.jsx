@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { FormGroup, FormControl, InputGroup } from 'react-bootstrap';
+import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -8,6 +8,10 @@ class App extends Component {
     this.state = {
       query: ' '
     }
+  }
+
+  search() {
+    console.log('this.state', this.state);
   }
 
   render() {
@@ -19,9 +23,10 @@ class App extends Component {
        <FormControl
         type="text"
         placeholder="search for an artist.."
-        query={this.state.query}
+        value={this.state.query}
         onChange={event => {this.setState({query: event.target.value})}}
        />
+       <Button onClick={() => this.search()}>search</Button>
         </InputGroup>
        </FormGroup>
        <div className="Profile">
