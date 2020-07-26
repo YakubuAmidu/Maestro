@@ -20,6 +20,21 @@ playAudio(previewUrl) {
       playingUrl: previewUrl,
       audio
     })
+  } else {
+    if (this.state.playingUrl === previewUrl) {
+      this.state.audio.pause();
+      this.setState({
+        playing: false
+      })
+    } else {
+      this.state.audio.pause();
+      audio.play();
+      this.setState({
+        playing: true,
+        playingUrl: previewUrl,
+        audio
+      })
+    }
   }
 }
 
