@@ -27,7 +27,6 @@ class App extends Component {
     .then(response => response.json())
     .then(json => {
       const artist = json.artists.items[0];
-      console.log('artist', artist);
       this.setState({ artist });
 
       FETCH_URL = `${ALBUM_URL}${artist.id}/top-tracks?country=US&`
