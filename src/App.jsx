@@ -48,15 +48,22 @@ class App extends Component {
        <Button onClick={() => this.search()}>search</Button>
         </InputGroup>
        </FormGroup>
-       <Profile
-       artist={this.state.artist}
-       />
-       <div className="Gallery">
-         Gallery
-       </div>
-      </div>
-    )
+       {
+         this.state.artist !== null
+          ?
+         <div>
+          <Profile
+         artist={this.state.artist}
+         />
+         <div className="Gallery">
+           Gallery
+         </div>
+         </div>
+      : <div></div>
   }
+  </div>
+)
+}
 }
 
 export default App;
