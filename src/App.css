@@ -72,3 +72,28 @@ body {
   bottom: 0px;
   padding: 10px;
 }
+
+.track-play {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+}
+
+.track-play-inner {
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  background-color: #000;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  padding-top: 13px;
+  margin-left: 80px;
+  margin-top: 80px;
+  opacity: 0;
+}
+
+.track-play-inner {
+  opacity: 0.8px;
+}
