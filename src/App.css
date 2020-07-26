@@ -21,6 +21,9 @@ body {
 .profile-info {
   margin: 10px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .profile-img {
