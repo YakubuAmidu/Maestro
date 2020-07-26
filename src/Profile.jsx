@@ -3,10 +3,13 @@ import './App.css';
 
 class Profile extends Component {
   render() {
+    let artist = { name: ' ', followers: {total: ' '}};
+    artist = this.props.artist !== null ? this.props.artist : artist;
+
     return (
-     <div>
-      <div>Profile name</div>
-      <div>Profile followers</div>
+     <div className="profile">
+      <div>{artist.name}</div>
+      <div>{artist.followers.total}</div>
      </div>
     )
   }
