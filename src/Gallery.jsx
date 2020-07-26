@@ -58,7 +58,11 @@ playAudio(previewUrl) {
               />
               <div className="track-play">
                <div className="track-play-inner">
-                  &#9654;
+                  {
+                    this.state.playingUrl === track.previewUrl
+                    ? <span>|  |</span>
+                    : <span>&#9654;</span>
+                  }
                </div>
               </div>
               <p className="track-text">
